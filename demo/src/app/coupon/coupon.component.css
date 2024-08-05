@@ -1,0 +1,70 @@
+.coupon-container {
+    width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    position: relative;
+    background: #f8e7e7;
+    font-family: Arial, sans-serif;
+}
+
+.coupon {
+    padding: 10px;
+    background: #fff;
+    border-bottom: 1px dashed #ccc;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around; /* Added to evenly space the items */
+}
+
+.coupon p {
+    margin: 0;
+    position: relative;
+    padding: 0 10px;
+}
+
+.coupon p:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -5px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 20px; /* Adjust as needed */
+    background: #ccc;
+}
+
+.tear-line {
+    position: relative;
+    height: 2px;
+}
+
+.tear-line::before,
+.tear-line::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #ccc;
+}
+
+.tear-line::before {
+    left: -6px;
+}
+
+.tear-line::after {
+    right: -6px;
+}
+
+.coupon-code {
+    text-align: center;
+    font-weight: bold;
+    background: #fff;
+    padding: 1px;
+}
