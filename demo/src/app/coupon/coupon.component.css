@@ -67,4 +67,16 @@
     font-weight: bold;
     background: #fff;
     padding: 1px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.cap {
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ccc;
+    margin-left: 10px;
 }

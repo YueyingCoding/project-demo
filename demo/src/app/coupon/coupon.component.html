@@ -1,11 +1,12 @@
 <div class="coupon-container">
     <div class="coupon">
-        <p>10% off over $69</p>
-        <p>15% off over $109</p>
-        <p>20% off over $189</p>
+        <p>{{publicCoupons[0]?.low_discount}}% off over ${{publicCoupons[0]?.low_minimum_purchase}}</p>
+        <p>{{publicCoupons[0]?.medium_discount}}% off over ${{publicCoupons[0]?.medium_minimum_purchase}}</p>
+        <p>{{publicCoupons[0]?.high_discount}}% off over ${{publicCoupons[0]?.high_minimum_purchase}}</p>
     </div>
     <!-- <div class="tear-line"></div> -->
     <div class="coupon-code">
-        <p>Code: *Capped at $40</p>
+        <p>Code: {{publicCoupons[0]?.code}}</p>
+        <p class="cap">*Capped at ${{publicCoupons[0]?.capped_amount}}</p>
     </div>
 </div>
