@@ -1,16 +1,21 @@
 <div class="registration">
     <div class="toggle" (click)="onToggle()">GET EXTRA 20%</div>
-    @if(open) {
-    <div class="right" [@contentAnimation]="open ? 'open' : 'closed'">
-        <h2>REGISTER AND GET</h2>
-        <div class="content">
-            <h1>20% OFF</h1>
-            <div class="separator"></div>
-            <div>
-                <p>Free SHIPPING</p>
-                <p>Free RETURNS</p>
-            </div>
+    <div class="right" *ngIf="open" [@contentAnimation]="open ? 'open' : 'closed'">
+      <h2>REGISTER AND GET</h2>
+      <div class="content">
+        <h1>20% OFF</h1>
+        <div class="separator"></div>
+        <div>
+          <p>Free SHIPPING</p>
+          <p>Free RETURNS</p>
         </div>
+      </div>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div *ngFor="let control of form.controls | keyvalue">
+          <label [for]="control.key">{{ control.key }}</label>
+          <input [id]="control.key" [formControlName]="control.key" />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
     </div>
-    }
-</div>
+  </div>
