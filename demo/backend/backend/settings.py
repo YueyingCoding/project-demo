@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "coupons",
     "form",
     "corsheaders",
+    "product"
 ]
 
 MIDDLEWARE = [
@@ -135,9 +136,9 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-    ],
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ],
 }
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:4200',  # Replace with your frontend URL

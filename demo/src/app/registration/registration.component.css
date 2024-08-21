@@ -41,7 +41,7 @@ body {
     text-align: center; /* Center the text */
     padding: 10px; /* Adjust padding as needed */
     background-color: #ffdfdf; /* Ensure the background color matches */
-    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+    /* transition: transform 300ms ease-in-out, opacity 300ms ease-in-out; */
     margin-left: 5rem;
     margin-right: 5rem;
   }

@@ -1,0 +1,11 @@
+<div class="product-container">
+    @for (product of products; track product.id) {
+    <div class="product" (click)="onClickProduct(product.id)" [routerLink]="['products', product.id]" routerLinkActive="router-link-active" >
+        <img [src]="hoveredProduct === product.id ? product.images[1]?.url : product.images[0]?.url" alt="Product Image"
+            width="200px" height="300px" (mouseover)="onHover(product.id)" (mouseleave)="onLeave()" />
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+        <p>${{ product.price }}</p>
+    </div>
+    }
+</div>
